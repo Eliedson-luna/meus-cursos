@@ -1,4 +1,8 @@
 
+# Nessa aula foi mostrado como se comunicar com uma api de maneira simplificada utilizando python com a biblioteca "requests" que instalamos
+# na aula anterior.
+
+
 import os
 import requests
 import json
