@@ -2,14 +2,15 @@
 # Nessa aula foi mostrado como se comunicar com uma api de maneira simplificada utilizando python com a biblioteca "requests" que instalamos
 # na aula anterior.
 
-
+from dotenv import load_dotenv
 import os
 import requests
 import json
 
 def load_api_key():
     try:
-        return os.environ["API_KEY"]
+        load_dotenv()
+        return os.getenv("API_KEY")
     except Exception as e:
         print('ERROR >>>>', e)
         exit()

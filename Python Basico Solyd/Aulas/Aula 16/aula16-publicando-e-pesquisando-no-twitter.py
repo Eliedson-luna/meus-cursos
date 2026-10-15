@@ -8,8 +8,8 @@
 
 
 from dotenv import load_dotenv
-import requests
 import os
+import requests
 import json
 
 consumer_key = None
@@ -18,8 +18,8 @@ bearer_token = None
 
 def set_up_env():
     try:
-        global bearer_token
         load_dotenv()
+        global bearer_token
         bearer_token = str(os.getenv('BEARER_TOKEN'))
 
         if not bearer_token:

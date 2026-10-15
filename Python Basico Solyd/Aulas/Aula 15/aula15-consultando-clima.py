@@ -1,15 +1,17 @@
 import requests
 import json
 import os
+from dotenv import load_dotenv
 
 def load_api_key():
     try:
-        return os.environ["OPENWEATHER_KEY"]
+        load_dotenv()
+        return os.getenv("OPENWEATHER_KEY")
     except Exception as e:
         print('ERROR >>>>', e)
         exit()
 
-api_key = '821d836560bbc83226a75b28f38fb2dc'
+api_key = load_api_key()
 
 city_name = str(input('Qual cidade deseja saber o clima? \n'))
 
